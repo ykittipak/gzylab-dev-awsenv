@@ -23,6 +23,8 @@ resource "aws_subnet" "private_subnets" {
  tags = {
    Name = "Private Subnet ${count.index + 1}"
  }
+}
+
  resource "aws_instance" "Test EC2" {
     ami           = "ami-0464f90f5928bccb8"
     instance_type = "t3.micro"
@@ -30,5 +32,4 @@ resource "aws_subnet" "private_subnets" {
     tags = {
         Name = "HelloWorld"
     }
-}
-}
+ }
