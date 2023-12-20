@@ -26,7 +26,7 @@ resource "aws_subnet" "private_subnets" {
 }
 
  resource "aws_instance" "Test_EC2" {
-    ami           = "ami-0464f90f5928bccb8"
+    ami           = "ami-0ef1c8de044716661"
     instance_type = "t3.micro"
 
     tags = {
