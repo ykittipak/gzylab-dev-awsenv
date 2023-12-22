@@ -2,7 +2,7 @@ resource "aws_vpc" "main" {
  cidr_block = "10.0.0.0/16"
  
  tags = {
-   Name = "GZY VPC001"
+   Name = "GZY TEST VPC1"
  }
 }
 resource "aws_subnet" "public_subnets" {
@@ -27,7 +27,7 @@ resource "aws_subnet" "private_subnets" {
 
  resource "aws_instance" "Test_EC2" {
     ami           = "ami-0ef1c8de044716661"
-    instance_type = "t2.micro"
+    instance_type = "t3.micro"
 
     tags = {
         Name = "HelloWorld"
